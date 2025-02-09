@@ -1,0 +1,24 @@
+es:
+  activerecord:
+      models:
+        movie: 'Pelicula'
+      attributes:
+        movie:
+          title: 'Titulo'
+          original_title: 'Titulo Original'
+          overview: 'Resumen'
+          release_date: 'Fecha de Estreno'
+          poster_path: 'Poster'
+          original_language: 'Idioma Original'
+  app_name: 'Buenas Peliculas'
+  shared:
+    items:
+      movies: 'Peliculas'
+      add: 'Agregar pelicula'
+  movies:
+    new:
+      title: 'Nueva Pelicula' 
+      en: 'Ingles'
+      es: 'Español'
+    create:
+      created: 'Pelicula creada exitosamente'
