@@ -1,0 +1,12 @@
+<%= form_for category do |f| %>
+  <% category.errors.full_messages.each do |error| %>
+    <div>
+      <%= error %>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <%= f.submit %>
+  <% end%>

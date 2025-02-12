@@ -10,15 +10,37 @@ en:
           release_date: 'Release Date'
           poster_path: 'Poster Path'
           original_language: 'Original Language'
+          categories: 'Categories'
   app_name: 'Good Movies'
-  shared:
-    items:
-      movies: 'Movies'
-      add: 'Add movie'
-  movies:
+  common:
+    confirm: 'Are you sure?'
+  create:
+    created: 'Movie created successfully'
+  categories:
+    create:
+      created: 'Category created successfully'
+    destroy:
+      destroyed: 'Category destroyed successfully'
+    index:
+      title: 'Categories'
     new:
-      title: 'New Movie'   
-      en: 'English'
-      es: 'Spanish'
+      title: 'New Category'
+    edit:
+      title: 'Edit Category'
+    update:
+      updated: 'Category updated successfully'
+  movies:
     create:
       created: 'Movie created successfully'
+    new: 
+      en: 'English'
+      es: 'Spanish'
+      title: 'New Movie'
+    update:
+      updated: 'Movie updated successfully'
+  shared:
+    items:
+      add: 'Add movie'
+      add_category: 'Add category'
+      movies: 'Movies'
+  

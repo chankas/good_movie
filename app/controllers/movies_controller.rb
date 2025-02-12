@@ -16,8 +16,21 @@ class MoviesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def edit  
+    @movie = Movie.find(params[:id])
+  end
+
+  def update
+    @movie = Movie.find(params[:id])
+    if @movie.update(movie_params)
+      redirect_to movies_path, notice: t('.updated')
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
   private
   def movie_params
-    params.require(:movie).permit(:title, :original_title, :overview, :release_date, :poster_path, :original_language)
+    params.require(:movie).permit(:title, :original_title, :overview, :release_date, :poster_path, :original_language, category_ids: [])
   end
 end

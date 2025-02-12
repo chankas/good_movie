@@ -2,6 +2,7 @@ es:
   activerecord:
       models:
         movie: 'Pelicula'
+        category: 'Categoria'
       attributes:
         movie:
           title: 'Titulo'
@@ -10,15 +11,36 @@ es:
           release_date: 'Fecha de Estreno'
           poster_path: 'Poster'
           original_language: 'Idioma Original'
+          categories: 'Categorias'
+        category:
+          name: 'Nombre'
   app_name: 'Buenas Peliculas'
-  shared:
-    items:
-      movies: 'Peliculas'
-      add: 'Agregar pelicula'
-  movies:
+  common:
+    confirm: '¿Estás seguro?'
+  categories:
+    create:
+      created: 'Categoria creada exitosamente'
+    destroy:
+      destroyed: 'Categoria destruida exitosamente' 
+    index:
+      title: 'Categorias'
     new:
-      title: 'Nueva Pelicula' 
-      en: 'Ingles'
-      es: 'Español'
+      title: 'Nueva Categoria'
+    edit:
+      title: 'Editar Categoria'
+    update:
+      updated: 'Categoria actualizada exitosamente'
+  movies:
     create:
       created: 'Pelicula creada exitosamente'
+    new:
+      en: 'Ingles'
+      es: 'Español'
+      title: 'Nueva Pelicula'
+    update:
+      updated: 'Pelicula actualizada exitosamente'
+  shared:
+    items:
+      add: 'Agregar pelicula'
+      add_category: 'Agregar categoria'
+      movies: 'Peliculas'

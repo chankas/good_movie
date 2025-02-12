@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_02_05_201837) do
+ActiveRecord::Schema[7.1].define(version: 2025_02_11_224126) do
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_movies", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "movie_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_category_movies_on_category_id"
+    t.index ["movie_id"], name: "index_category_movies_on_movie_id"
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "original_title"

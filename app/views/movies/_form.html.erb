@@ -1,0 +1,40 @@
+
+<%= form_for movie do |f| %>
+  <% movie.errors.full_messages.each do |error| %>
+    <div>
+      <%= error %>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :original_title%>
+    <%= f.text_field :original_title %>
+  </div>
+  <div class="field">
+    <%= f.label :overview %>
+    <%= f.text_area :overview %>
+  </div>
+  <div class="field">
+    <%= f.label :poster_path %>
+    <%= f.text_field :poster_path %>
+  </div>
+  <div class="field">
+    <%= f.label :original_language%>
+    <%= f.select :original_language, options_for_select([[t('.en'),'en'], [t('.es'), 'es']]) %>
+  </div>
+  <div class="field">
+    <%= f.label :release_date %>
+    <%= f.date_select :release_date %>
+  </div>
+  <div class="field">
+    <%= f.label :categories %>
+      <% Category.all.each do |category| -%>
+      <%= check_box_tag :category_ids, category.id, @movie.categories.include?(category), :name => 'movie[category_ids][]' -%>
+      <%= label_tag :category_ids, category.name -%>
+    <% end -%>
+  </div>
+  <%= f.submit %>
+<% end %>
