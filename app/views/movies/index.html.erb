@@ -6,12 +6,11 @@
 </div>
 <% @movies.each do |movie| %>
 <div>
-  <%= image_tag movie.poster_path.blank? ? 'Image-not-found.png': movie.poster_path %>
   <div class="movie">
     <p><%= movie.title %></p>
     <p><%= movie.original_title %></p>
     <p><%= movie.overview %></p>
-    <p><%= movie.poster_path %></p>
+    <p><%= image_tag movie.poster_path.blank? ? 'Image-not-found.png': movie.poster_path, style: 'height:400px; width:auto;' %></p>
     <p><%= movie.original_language %></p>
     <p><%= movie.release_date %></p>
     <p><% movie.categories.each do |category| %>
