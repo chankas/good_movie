@@ -7,6 +7,36 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
     assert_select '.movie', 2
   end
 
+  test 'render a list movies filtered by category' do
+    category = categories(:anime)
+    get movies_path(category_id: category.id)    
+    assert_response :success
+    assert_select '.movie', 1
+  end
+
+  test 'render a list movies filtered by min_year' do
+    get movies_path(min_year: 1980)
+    assert_response :success
+    assert_select '.movie', 1
+  end
+
+  test 'render a list movies filtered by max_year' do
+    get movies_path(max_year: 1980)
+    assert_response :success
+    assert_select '.movie', 1
+  end
+
+  test 'render a list movies filtered by min_year and max_year' do
+    get movies_path(min_year: 1980, max_year: 1900)
+    assert_response :success
+    assert_select '.movie', 0
+  end
+
+  test 'render a list movies filtered by title' do
+    get movies_path(query_text: 'fuga')
+    assert_response :success
+    assert_select '.movie', 1
+  end
   test 'render a new movie form' do
     get new_movie_path
 

@@ -5,6 +5,6 @@
 # below each fixture, per the syntax in the comments below
 #
 one: {
-  movie: Movie.find(:one),
-  category: Category.find(:anime)
+  movie: movies(:one),
+  category: categories(:anime)
 }
