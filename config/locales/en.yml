@@ -32,6 +32,9 @@ en:
   movies:
     create:
       created: 'Movie created successfully'
+    index:
+      min_year: 'From year'
+      max_year: 'To year'
     new: 
       en: 'English'
       es: 'Spanish'

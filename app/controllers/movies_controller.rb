@@ -6,6 +6,12 @@ class MoviesController < ApplicationController
     if product_params_index[:category_id].present?
       @movies = @movies.where("category_movies.category_id"  => product_params_index[:category_id])
     end
+    if product_params_index[:min_year].present?
+      @movies = @movies.where("movies.release_date >= ?", Date.new(product_params_index[:min_year].to_i, 1, 1))
+    end
+    if product_params_index[:max_year].present?
+      @movies = @movies.where("movies.release_date <= ?", Date.new(product_params_index[:max_year].to_i, 12, 31))
+    end
     @movies = @movies.order('movies.release_date asc').load_async
   end
 
@@ -40,6 +46,6 @@ class MoviesController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id)
+    params.permit(:category_id, :min_year, :max_year)
   end
 end

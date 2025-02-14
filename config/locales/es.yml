@@ -33,6 +33,9 @@ es:
   movies:
     create:
       created: 'Pelicula creada exitosamente'
+    index:
+      min_year: 'Desde el año'
+      max_year: 'Hasta el año'
     new:
       en: 'Ingles'
       es: 'Español'
