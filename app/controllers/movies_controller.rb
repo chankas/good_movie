@@ -1,7 +1,8 @@
 class MoviesController < ApplicationController
   
   def index
-    @movies = Movie.all
+    @categories = Category.order(name: :asc).load_async
+    @movies = Movie.all.order(created_at: :desc).load_async
   end
 
   def new

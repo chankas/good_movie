@@ -1,4 +1,9 @@
-<h2><%= t('.title') %> </h2>
+<div>
+  <%= link_to t('.all'), movies_path %>
+  <% @categories.each do |category| %>
+    <%= link_to category.name, movies_path(category_id: category.id) %>
+  <% end %>
+</div>
 <% @movies.each do |movie| %>
 <div>
   <%= image_tag movie.poster_path.blank? ? 'Image-not-found.png': movie.poster_path %>
