@@ -34,8 +34,10 @@ es:
     create:
       created: 'Pelicula creada exitosamente'
     index:
+      all: 'Todas'
       min_year: 'Desde el año'
       max_year: 'Hasta el año'
+      query_text: 'Buscar peliculas'
     new:
       en: 'Ingles'
       es: 'Español'

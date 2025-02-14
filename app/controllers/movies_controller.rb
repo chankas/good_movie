@@ -12,6 +12,9 @@ class MoviesController < ApplicationController
     if product_params_index[:max_year].present?
       @movies = @movies.where("movies.release_date <= ?", Date.new(product_params_index[:max_year].to_i, 12, 31))
     end
+    if product_params_index[:query_text].present?
+      @movies = @movies.search_fulltext(product_params_index[:query_text])
+    end
     @movies = @movies.order('movies.release_date asc').load_async
   end
 
@@ -46,6 +49,6 @@ class MoviesController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id, :min_year, :max_year)
+    params.permit(:category_id, :min_year, :max_year, :query_text)
   end
 end

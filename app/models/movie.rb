@@ -1,5 +1,12 @@
 class Movie < ApplicationRecord
-
+  include PgSearch::Model
+  pg_search_scope :search_fulltext,
+    against: {
+      title: "A",
+      original_title: "B",
+      overview: "C"
+  }
+    
   has_many :category_movies
   has_many :categories, through: :category_movies
 

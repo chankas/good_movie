@@ -33,8 +33,10 @@ en:
     create:
       created: 'Movie created successfully'
     index:
+      all: 'All'
       min_year: 'From year'
       max_year: 'To year'
+      query_text: 'Search movies'
     new: 
       en: 'English'
       es: 'Spanish'
