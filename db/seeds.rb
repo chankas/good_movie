@@ -10,6 +10,7 @@ Movie.create!(
   release_date: "2013-07-11",
   poster_path: "https://image.tmdb.org/t/p/w1280/atEmHkVFTSGRYt2PeCiziQqbZnI.jpg",
   original_language: "en",
+  vote_average: 3.5,
   category_ids: [Category.find_by(name: "Ciencia ficción").id, Category.find_by(name: "Acción").id, Category.find_by(name: "Comedia").id]
 )
 
@@ -21,6 +22,7 @@ Movie.create!(
   release_date: "1988-07-15",
   poster_path: "https://image.tmdb.org/t/p/original/6VMqX6fnQZ7IkNfa6RJG2PSeOrc.jpg",
   original_language: "en",
+  vote_average: 7.7,
   category_ids: [Category.find_by(name: "Acción").id, Category.find_by(name: "Suspenso").id]
 )
 
@@ -31,6 +33,7 @@ Movie.create!(
   release_date: "1994-06-23",
   poster_path: "https://www.themoviedb.org/t/p/w1280/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg",
   original_language: "en",
+  vote_average: 8.3,
   category_ids: [Category.find_by(name: "Animación").id, Category.find_by(name: "Aventura").id, Category.find_by(name: "Familia").id]
 )
 
@@ -41,6 +44,7 @@ Movie.create!(
   release_date: "2002-12-25",
   poster_path: "https://www.themoviedb.org/t/p/w1280/wcWi3xIEzIjDERTZyWoqryQGURA.jpg",
   original_language: "en",
+  vote_average: 7.9,
   category_ids: [Category.find_by(name: "Crimen").id, Category.find_by(name: "Drama").id]
 )
 
@@ -51,6 +55,7 @@ Movie.create!(
   release_date: "1995-11-22",
   poster_path: "https://www.themoviedb.org/t/p/w1280/jvn7wy3RSNEXnFSXLpH2of2LcV6.jpg",
   original_language: "en",
+  vote_average: 7.9,
   category_ids: [Category.find_by(name: "Animación").id, Category.find_by(name: "Aventura").id, Category.find_by(name: "Comedia").id, Category.find_by(name: "Familia").id]
 )
 
@@ -61,6 +66,7 @@ Movie.create!(
   release_date: "1972-03-14",
   poster_path: "https://www.themoviedb.org/t/p/w1280/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
   original_language: "en",
+  vote_average: 8.7,
   category_ids: [Category.find_by(name: "Crimen").id, Category.find_by(name: "Drama").id]
 )
 
@@ -71,6 +77,7 @@ Movie.create!(
   release_date: "2001-12-19",
   poster_path: "https://www.themoviedb.org/t/p/w1280/56zTpe2xvaA4alU51sRWPoKPYZy.jpg",
   original_language: "en",
+  vote_average: 8.3,
   category_ids: [Category.find_by(name: "Aventura").id, Category.find_by(name: "Fantasía").id]
 )
 Movie.create!(
@@ -80,6 +87,7 @@ Movie.create!(
   release_date: "2010-07-16",
   poster_path: "https://www.themoviedb.org/t/p/w1280/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
   original_language: "en",
+  vote_average: 8.3,
   category_ids: [Category.find_by(name: "Acción").id, Category.find_by(name: "Ciencia ficción").id, Category.find_by(name: "Suspenso").id]
 )
 Movie.create!(
@@ -89,5 +97,6 @@ Movie.create!(
   release_date: "1998-06-04",
   poster_path: "https://www.themoviedb.org/t/p/w1280/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
   original_language: "en",
+  vote_average: 8.1,
   category_ids: [Category.find_by(name: "Comedia").id, Category.find_by(name: "Drama").id]
 )

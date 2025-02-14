@@ -11,6 +11,7 @@ en:
           poster_path: 'Poster Path'
           original_language: 'Original Language'
           categories: 'Categories'
+          vote_average: 'Vote Average'
   app_name: 'Good Movies'
   common:
     confirm: 'Are you sure?'
@@ -37,6 +38,10 @@ en:
       min_year: 'From year'
       max_year: 'To year'
       query_text: 'Search movies'
+      newest: 'Newest'
+      oldest: 'Oldest'
+      best_vote_average: 'Best rated'
+      worst_vote_average: 'Worst rated'
     new: 
       en: 'English'
       es: 'Spanish'

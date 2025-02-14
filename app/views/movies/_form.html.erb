@@ -30,6 +30,9 @@
     <%= f.date_select :release_date %>
   </div>
   <div class="field">
+    <%= f.label :vote_average %>
+    <%= f.number_field :vote_average %>
+  <div class="field">
     <%= f.label :categories %>
       <% Category.all.each do |category| -%>
       <%= check_box_tag :category_ids, category.id, @movie.categories.include?(category), :name => 'movie[category_ids][]' -%>

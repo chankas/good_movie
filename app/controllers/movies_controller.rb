@@ -15,7 +15,17 @@ class MoviesController < ApplicationController
     if product_params_index[:query_text].present?
       @movies = @movies.search_fulltext(product_params_index[:query_text])
     end
-    @movies = @movies.order('movies.release_date asc').load_async
+    if product_params_index[:order_by].present?
+      puts product_params_index[:order_by]
+      order_by = {
+        "newest" => 'movies.release_date desc', 
+        "oldest" => 'movies.release_date asc', 
+        "best" => 'movies.vote_average desc', 
+        "worst" => 'movies.vote_average asc'
+    }.fetch(product_params_index[:order_by], 'movies.release_date DESC')
+puts order_by
+    @movies = @movies.order(order_by).load_async
+    end
   end
 
   def new
@@ -45,10 +55,10 @@ class MoviesController < ApplicationController
   end
   private
   def movie_params
-    params.require(:movie).permit(:title, :original_title, :overview, :release_date, :poster_path, :original_language, category_ids: [])
+    params.require(:movie).permit(:title, :original_title, :overview, :release_date, :poster_path, :original_language, :vote_average, category_ids: [])
   end
 
   def product_params_index
-    params.permit(:category_id, :min_year, :max_year, :query_text)
+    params.permit(:category_id, :min_year, :max_year, :query_text, :order_by)
   end
 end

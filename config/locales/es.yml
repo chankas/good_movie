@@ -12,6 +12,7 @@ es:
           poster_path: 'Poster'
           original_language: 'Idioma Original'
           categories: 'Categorias'
+          vote_average: 'Calificacion'
         category:
           name: 'Nombre'
   app_name: 'Buenas Peliculas'
@@ -38,6 +39,10 @@ es:
       min_year: 'Desde el año'
       max_year: 'Hasta el año'
       query_text: 'Buscar peliculas'
+      newest: 'Mas recientes'
+      oldest: 'Mas antiguas'
+      best_vote_average: 'Mejor calificadas'
+      worst_vote_average: 'Peor calificadas'
     new:
       en: 'Ingles'
       es: 'Español'
