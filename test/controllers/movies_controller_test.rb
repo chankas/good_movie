@@ -4,26 +4,26 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
   test 'render a list of movies' do
     get movies_path
     assert_response :success
-    assert_select '.movie', 2
+    assert_select '.movie', 22
   end
 
   test 'render a list movies filtered by category' do
-    category = categories(:anime)
+    category = categories(:accion)
     get movies_path(category_id: category.id)    
     assert_response :success
-    assert_select '.movie', 1
+    assert_select '.movie', 9
   end
 
   test 'render a list movies filtered by min_year' do
-    get movies_path(min_year: 1980)
+    get movies_path(min_year: 1998)
     assert_response :success
-    assert_select '.movie', 1
+    assert_select '.movie', 14
   end
 
   test 'render a list movies filtered by max_year' do
-    get movies_path(max_year: 1980)
+    get movies_path(max_year: 2000)
     assert_response :success
-    assert_select '.movie', 1
+    assert_select '.movie', 12
   end
 
   test 'render a list movies filtered by min_year and max_year' do
@@ -33,9 +33,9 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'render a list movies filtered by title' do
-    get movies_path(query_text: 'fuga')
+    get movies_path(query_text: 'viaje')
     assert_response :success
-    assert_select '.movie', 1
+    assert_select '.movie', 5
   end
   test 'render a new movie form' do
     get new_movie_path
@@ -76,18 +76,17 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'render a movie edit form' do
-    movie = movies(:one)
+    movie = movies(:rapido_y_furioso)
     get edit_movie_path(movie)
 
     assert_response :success
     assert_select 'form'
   end
   test 'allows to update a movie' do
-    movie = movies(:one)
+    movie = movies(:rapido_y_furioso)
     patch movie_path(movie), params: {
       movie: {
-        title: 'Tiburoncin uh ah ah',
-        category_ids: [Category.first.id, Category.last.id]
+        title: 'A todo gas'
       }
     }
     assert_redirected_to movies_url

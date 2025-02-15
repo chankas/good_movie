@@ -89,8 +89,8 @@ el_ventaor_del_futuro:
   vote_average: 7.5
   categories: [accion, ciencia_ficcion]
 
-el_sexto_sentido:
-  title: El sexto sentido
+sexto_sentido:
+  title: Sexto sentido
   original_title: The Sixth Sense
   overview: Malcolm Crowe es un psicólogo infantil que recibe la visita de un niño llamado Cole Sear. Cole le confiesa a Malcolm que puede ver a los muertos y que necesita su ayuda para entender lo que le sucede. Juntos, Malcolm y Cole deberán enfrentar sus miedos y descubrir la verdad detrás de los fantasmas que atormentan a Cole.
   release_date: 1999-08-06
@@ -190,4 +190,36 @@ duro_de_matar:
   original_language: en
   vote_average: 7.7
   categories: [accion, suspenso]
+
+matar_o_morir:
+  title: Matar o morir
+  original_title: The Equalizer
+  overview: Robert McCall es un ex agente de la CIA que lleva una vida tranquila y solitaria. Sin embargo, cuando conoce a Teri, una joven prostituta, McCall decide ayudarla y enfrentar a los mafiosos que la explotan. McCall se convierte en un justiciero y comienza una guerra contra la mafia para proteger a los inocentes.
+  release_date: 2014-09-26
+  poster_path: https://www.themoviedb.org/t/p/w1280/vq3E4dNnDIoCMjPim2XfWwEuRlX.jpg
+  original_language: en
+  vote_average: 7.2
+  categories: [accion, crimen, suspenso]
+
+viaje_al_centro_de_la_tierra:
+  title: Viaje al centro de la Tierra
+  original_title: Journey to the Center of the Earth
+  overview: Trevor Anderson es un científico que descubre un libro antiguo que perteneció a su hermano Max, un arqueólogo desaparecido. El libro contiene un mapa que lleva al centro de la Tierra y Trevor decide emprender un viaje para encontrar a su hermano. Junto a su sobrino Sean y la guía Hannah, Trevor se adentra en las profundidades de la Tierra y descubre un mundo lleno de peligros y maravillas.
+  release_date: 2008-07-11
+  poster_path: https://www.themoviedb.org/t/p/w1280/uWWKeB6iPtn5PIckZK0L4yw3Fg2.jpg
+  original_language: en
+  vote_average: 5.8
+  categories: [accion, aventura, ciencia_ficcion]
+
+viaje_a_las_estrellas:
+  title: Viaje a las estrellas
+  original_title: Star Trek
+  overview: James T. Kirk es un joven oficial de la Flota Estelar que se une a la nave USS Enterprise para explorar el espacio. Junto a su tripulación, Kirk se enfrenta a una amenaza alienígena que pone en peligro la galaxia entera. Kirk deberá demostrar su valentía y liderazgo para salvar a la human
+  release_date: 2009-05-08
+  poster_path: https://www.themoviedb.org/t/p/w1280/9byecLwsbbkAqGdxcKuuTI5kEzZ.jpg
+  original_language: en
+  vote_average: 7.4
+  categories: [accion, aventura, ciencia_ficcion]
+
+
   
