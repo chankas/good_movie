@@ -35,6 +35,7 @@ en:
       created: 'Movie created successfully'
     index:
       all: 'All'
+    filters:
       min_year: 'From year'
       max_year: 'To year'
       query_text: 'Search movies'

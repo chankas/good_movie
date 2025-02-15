@@ -36,6 +36,7 @@ es:
       created: 'Pelicula creada exitosamente'
     index:
       all: 'Todas'
+    filters:
       min_year: 'Desde el año'
       max_year: 'Hasta el año'
       query_text: 'Buscar peliculas'

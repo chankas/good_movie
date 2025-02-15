@@ -4,26 +4,26 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
   test 'render a list of movies' do
     get movies_path
     assert_response :success
-    assert_select '.movie', 22
-  end
-
-  test 'render a list movies filtered by category' do
-    category = categories(:accion)
-    get movies_path(category_id: category.id)    
-    assert_response :success
     assert_select '.movie', 9
   end
 
-  test 'render a list movies filtered by min_year' do
-    get movies_path(min_year: 1998)
+  test 'render a list movies filtered by category' do
+    category = categories(:animacion)
+    get movies_path(category_id: category.id)    
     assert_response :success
-    assert_select '.movie', 14
+    assert_select '.movie', 3
+  end
+
+  test 'render a list movies filtered by min_year' do
+    get movies_path(min_year: 2002)
+    assert_response :success
+    assert_select '.movie', 7
   end
 
   test 'render a list movies filtered by max_year' do
-    get movies_path(max_year: 2000)
+    get movies_path(max_year: 1990)
     assert_response :success
-    assert_select '.movie', 12
+    assert_select '.movie', 4
   end
 
   test 'render a list movies filtered by min_year and max_year' do
