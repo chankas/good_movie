@@ -15,17 +15,14 @@ class MoviesController < ApplicationController
     if product_params_index[:query_text].present?
       @movies = @movies.search_fulltext(product_params_index[:query_text])
     end
-    if product_params_index[:order_by].present?
-      puts product_params_index[:order_by]
-      order_by = {
-        "newest" => 'movies.release_date desc', 
-        "oldest" => 'movies.release_date asc', 
-        "best" => 'movies.vote_average desc', 
-        "worst" => 'movies.vote_average asc'
+    order_by = {
+      "newest" => 'movies.release_date desc', 
+      "oldest" => 'movies.release_date asc', 
+      "best" => 'movies.vote_average desc', 
+      "worst" => 'movies.vote_average asc'
     }.fetch(product_params_index[:order_by], 'movies.release_date DESC')
-puts order_by
     @movies = @movies.order(order_by).load_async
-    end
+      
   end
 
   def new

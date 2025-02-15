@@ -1,12 +1,57 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-anime:
-  name: 'Anime'
+accion:
+  name: Acción
+  
+animacion:
+  name: Animación
+
+aventura:
+  name: Aventura
+
+belica:
+  name: Bélica
+
+ciencia_ficción:
+  name: Ciencia ficción
 
 comedia:
-  name: 'Comedia'
+  name: Comedia
+
+crimen:
+  name: Crimen
+
+documental:
+  name: Documental
+
+drama:
+  name: Drama
+
+familia:
+  name: Familia
+
+fantasia:
+  name: Fantasía
+
+historia:
+  name: Historia
+
+misterio:
+  name: Misterio
+
+musica:
+  name: Música
+
+pelicula_de_tv:
+  name: Película de TV
+
+romance:
+  name: Romance
+
+suspenso:
+  name: Suspenso
 
 terror:
-  name: 'Terror'
+  name: Terror
 
 
