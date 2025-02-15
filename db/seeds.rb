@@ -95,8 +95,85 @@ Movie.create!(
   original_title: "The Truman Show",
   overview: "Truman Burbank es un hombre común y corriente que vive en un pueblo común y corriente. Sin embargo, lo que Truman no sabe es que su vida es un programa de televisión y que todo lo que le rodea es falso. Cuando descubre la verdad, Truman deberá decidir si quiere seguir viviendo en una mentira o si prefiere la verdad, por más dolorosa que sea.",
   release_date: "1998-06-04",
-  poster_path: "https://www.themoviedb.org/t/p/w1280/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+  poster_path: "https://www.themoviedb.org/t/p/w1280/4BGVZSwv5n0hMIAWwiSjMFDQ63K.jpg",
   original_language: "en",
   vote_average: 8.1,
   category_ids: [Category.find_by(name: "Comedia").id, Category.find_by(name: "Drama").id]
+)
+
+Movie.create!(
+  title: "El club de la pelea",
+  original_title: "Fight Club",
+  overview: "Un hombre común y corriente, sin nombre, conoce a Tyler Durden, un vendedor de jabón que le propone formar un club de pelea. Juntos, los dos hombres crean un club secreto donde los hombres pueden pelear entre sí para liberar su ira y su frustración. Sin embargo, cuando el club de la pelea se convierte en algo más grande, el protagonista deberá enfrentar las consecuencias de sus actos.",  
+  release_date: "1999-10-15",
+  poster_path: "https://www.themoviedb.org/t/p/w1280/sgTAWJFaB2kBvdQxRGabYFiQqEK.jpg",
+  original_language: "en",
+  vote_average: 8.8,
+  category_ids: [Category.find_by(name: "Drama").id, Category.find_by(name: "Suspenso").id]
+)
+
+Movie.create!(
+  title: "El vengador del futuro",
+  original_title: "Total Recall",
+  overview: "Douglas Quaid es un hombre común y corriente que vive en un mundo futurista. Sin embargo, cuando Quaid decide someterse a un procedimiento para implantar recuerdos falsos en su mente, descubre que su vida entera ha sido una mentira. Quaid deberá emprender un viaje para descubrir la verdad y salvar a la Tierra de una invasión alienígena.",
+  release_date: "1990-06-01",
+  poster_path: "https://www.themoviedb.org/t/p/w1280/v7DoneFNYIrCGeNFiPrqGiQlimN.jpg",
+  original_language: "en",
+  vote_average: 7.5,
+  category_ids: [Category.find_by(name: "Acción").id, Category.find_by(name: "Ciencia ficción").id]
+)
+
+Movie.create!(
+  title: "El sexto sentido",
+  original_title: "The Sixth Sense",
+  overview: "Malcolm Crowe es un psicólogo infantil que recibe la visita de un niño llamado Cole Sear. Cole le confiesa a Malcolm que puede ver a los muertos y que necesita su ayuda para entender lo que le sucede. Juntos, Malcolm y Cole deberán enfrentar sus miedos y descubrir la verdad detrás de los fantasmas que atormentan a Cole.",
+  release_date: "1999-08-06",
+  poster_path: "https://www.themoviedb.org/t/p/w1280/wcnLlfQ2USwvyYbd6XgtNEOQfMT.jpg",
+  original_language: "en",
+  vote_average: 8.1,
+  category_ids: [Category.find_by(name: "Drama").id, Category.find_by(name: "Misterio").id]
+)
+
+Movie.create!(
+  title: "El silencio de los inocentes",
+  original_title: "The Silence of the Lambs",
+  overview: "Clarice Starling, una agente del FBI, es asignada para investigar el caso de un asesino en serie conocido como Buffalo Bill. Para atrapar a Buffalo Bill, Clarice deberá pedir ayuda al Dr. Hannibal Lecter, un psiquiatra y asesino en serie que se encuentra encarcelado. Sin embargo, Lecter tiene sus propios planes y Clarice deberá enfrentar sus miedos para salvar a la próxima víctima de Buffalo Bill.",
+  release_date: "1991-02-14",
+  poster_path: "https://www.themoviedb.org/t/p/w1280/8FdQQ3cUCs9goEOr1qUFaHackoJ.jpg",
+  original_language: "en",
+  vote_average: 8.6,
+  category_ids: [Category.find_by(name: "Crimen").id, Category.find_by(name: "Drama").id, Category.find_by(name: "Suspenso").id]
+)
+
+Movie.create!(
+  title: "El viaje de Chihiro",
+  original_title: "Spirited Away",
+  overview: "Chihiro es una niña de diez años que se muda a un nuevo pueblo con sus padres. Sin embargo, cuando sus padres son transformados en cerdos por un hechizo, Chihiro deberá emprender un viaje para salvarlos. En su camino, Chihiro conocerá a Haku, un misterioso chico que le ayudará a enfrentar sus miedos y descubrir su verdadero destino.",
+  release_date: "2001-07-20",
+  poster_path: "https://www.themoviedb.org/t/p/w1280/laXrmaTRuroArSPfsGlvTbeWxVA.jpg",
+  original_language: "en",
+  vote_average: 8.6,
+  category_ids: [Category.find_by(name: "Animación").id, Category.find_by(name: "Aventura").id, Category.find_by(name: "Fantasía").id]
+)
+
+Movie.create!(
+  title: "El aro",
+  original_title: "The Ring",
+  overview: "Rachel Keller es una periodista que investiga la misteriosa muerte de su sobrina. Cuando descubre que su sobrina murió después de ver un video maldito, Rachel decide investigar el origen del video y descubrir la verdad detrás de la maldición. Sin embargo, Rachel descubrirá que la maldición es real y que su vida corre peligro.",
+  release_date: "2002-10-18",
+  poster_path: "https://www.themoviedb.org/t/p/w1280/4TPPSB8OAtgYo9EdFzr7tsTsLDB.jpg",
+  original_language: "en",
+  vote_average: 7.1,
+  category_ids: [Category.find_by(name: "Misterio").id, Category.find_by(name: "Suspenso").id, Category.find_by(name: "Terror").id]
+)
+
+Movie.create!(
+  title: "El resplandor",
+  original_title: "The Shining",
+  overview: "Jack Torrance es un escritor que acepta un trabajo como cuidador de un hotel en invierno. Sin embargo, cuando Jack y su familia se mudan al hotel, empiezan a suceder cosas extrañas. Jack comienza a tener visiones y a perder la cordura, mientras que su hijo Danny descubre que el hotel está maldito. Juntos, Jack y Danny deberán enfrentar sus miedos y descubrir la verdad detrás del resplandor.",
+  release_date: "1980-05-23",
+  poster_path: "https://www.themoviedb.org/t/p/w1280/mm003Mj2e9kJRsrxiVdPn2BSBPh.jpg",
+  original_language: "en",
+  vote_average: 8.4,
+  category_ids: [Category.find_by(name: "Drama").id, Category.find_by(name: "Suspenso").id, Category.find_by(name: "Terror").id]
 )
