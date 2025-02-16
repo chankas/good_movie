@@ -22,6 +22,8 @@ class MoviesController < ApplicationController
       "worst" => 'movies.vote_average asc'
     }.fetch(product_params_index[:order_by], 'movies.release_date DESC')
     @movies = @movies.order(order_by).load_async
+
+    @pagy, @movies = pagy_countless(@movies, items: 9)
       
   end
 

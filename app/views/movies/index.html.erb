@@ -1,7 +1,12 @@
-<%= link_to t('.all'), movies_path %>
-<%= render partial: 'category', collection: @categories %>
-<%= render partial: 'filters' %>
-<%= render partial: 'movie', collection: @movies %>
+<%= turbo_frame_tag "home" do %>
+  <%= link_to t('.all'), movies_path %>
+  <%= render partial: 'category', collection: @categories %>
+  <%= render partial: 'filters' %>
+  <%= turbo_frame_tag "products-#{@pagy.page}" do %>
+    <%= render partial: 'movie', collection: @movies %>
+    <%= turbo_frame_tag "products-#{@pagy.next}", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+  <% end %>
+<% end %>
 
 
 
