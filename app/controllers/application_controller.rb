@@ -5,7 +5,12 @@ class ApplicationController < ActionController::Base
   before_action :set_current_user
   before_action :protect_pages
 
+  class NotAutorized < StandardError; end
   
+  rescue_from NotAutorized do
+    redirect_to movies_path, alert: t('common.not_allowed')
+  end
+ 
   private
   def switch_locale(&action)
     I18n.with_locale(locale_from_header, &action)
@@ -25,6 +30,6 @@ class ApplicationController < ActionController::Base
 
   def authorize!(record)
     is_allowed = record.user == Current.user
-    redirect_to movies_path, alert: t('common.not_allowed') unless is_allowed
+    raice NotAutorized unless is_allowed
   end
 end

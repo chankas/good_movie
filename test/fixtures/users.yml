@@ -9,8 +9,19 @@ andres:
   username: andres
   email: andres@mail.com
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: false
+
 carlos: 
   name: Carlos
   username: carlos
   email: carlos@mail.com
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: false
+
+admin:
+  name: Admin
+  username: admin
+  email: admin@mail.com
+  password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: true
+
