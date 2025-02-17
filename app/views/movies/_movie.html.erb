@@ -10,5 +10,5 @@
       <%= category.name %> 
     <% end %>
   </p>
-  <%= link_to t('common.edit'), edit_movie_path(movie) %>
+  <%= link_to t('common.edit'), edit_movie_path(movie), 'data-turbo-frame': '_top' %>
 </div>
