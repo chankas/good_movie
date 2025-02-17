@@ -7,6 +7,7 @@ el_rey_leon:
   original_language: en
   vote_average: 8.3
   categories: [animacion, aventura, familia]
+  user: andres
 
 atrapame_si_puedes:
   title: Atrápame si puedes 
@@ -17,6 +18,7 @@ atrapame_si_puedes:
   original_language: en
   vote_average: 7.9
   categories: [crimen, drama]
+  user: carlos
 
 toy_story:
   title: Toy Story
@@ -27,6 +29,7 @@ toy_story:
   original_language: en
   vote_average: 7.9
   categories: [animacion, aventura, comedia, familia]
+  user: andres
 
 el_padrimo:
   title: El Padrino
@@ -37,6 +40,7 @@ el_padrimo:
   original_language: en
   vote_average: 8.7
   categories: [crimen, drama]
+  user: carlos
 
 el_senor_de_los_anillos:
   title: El señor de los anillos - La comunidad del anillo
@@ -47,6 +51,7 @@ el_senor_de_los_anillos:
   original_language: en
   vote_average: 8.3
   categories: [aventura, fantasia]
+  user: andres
 
 el_origen:
   title: El origen
@@ -57,6 +62,7 @@ el_origen:
   original_language: en
   vote_average: 8.3
   categories: [accion, ciencia_ficcion, suspenso]
+  user: carlos
 
 the_truman_show:
   title: The truman show
@@ -67,6 +73,7 @@ the_truman_show:
   original_language: en
   vote_average: 8.1
   categories: [comedia, drama]
+  user: andres
 
 el_club_de_la_pelea:
   title: El club de la pelea
@@ -77,7 +84,7 @@ el_club_de_la_pelea:
   original_language: en
   vote_average: 8.8
   categories: [drama, suspenso]
-
+  user: carlos
 
 el_ventaor_del_futuro:
   title: El vengador del futuro
@@ -88,6 +95,7 @@ el_ventaor_del_futuro:
   original_language: en
   vote_average: 7.5
   categories: [accion, ciencia_ficcion]
+  user: andres
 
 sexto_sentido:
   title: Sexto sentido
@@ -98,7 +106,7 @@ sexto_sentido:
   original_language: en
   vote_average: 8.1
   categories: [drama, misterio]
-
+  user: carlos
 
 el_silencio_de_los_inocentes:
   title: El silencio de los inocentes
@@ -109,7 +117,7 @@ el_silencio_de_los_inocentes:
   original_language: en
   vote_average: 8.6
   categories: [crimen, drama, suspenso]
-
+  user: andres
 
 el_viaje_de_chihiro:
   title: El viaje de Chihiro
@@ -120,6 +128,7 @@ el_viaje_de_chihiro:
   original_language: en
   vote_average: 8.6
   categories: [animacion, aventura, fantasia]
+  user: carlos
 
 el_aro:
   title: El aro
@@ -130,6 +139,7 @@ el_aro:
   original_language: en
   vote_average: 7.1
   categories: [misterio, suspenso, terror]
+  user: andres
 
 el_resplandor:
   title: El resplandor
@@ -140,6 +150,7 @@ el_resplandor:
   original_language: en
   vote_average: 8.4
   categories: [drama, suspenso, terror]
+  user: carlos
 
 the_matrix:
   title: The Matrix
@@ -150,6 +161,7 @@ the_matrix:
   original_language: en
   vote_average: 8.7
   categories: [accion, ciencia_ficcion, suspenso]
+  user: andres
 
 rapido_y_furioso:
   title: Rápido y furioso
@@ -160,6 +172,7 @@ rapido_y_furioso:
   original_language: en
   vote_average: 6.8
   categories: [accion, crimen]
+  user: carlos
 
 titanic:
   title: Titanic
@@ -170,6 +183,7 @@ titanic:
   original_language: en
   vote_average: 7.9
   categories: [drama, romance]
+  user: andres
 
 sharknado:
   title: Sharknado
@@ -180,6 +194,7 @@ sharknado:
   original_language: en
   vote_average: 3.5
   categories: [ciencia_ficcion, accion, comedia]
+  user: andres
 
 duro_de_matar:
   title: Duro de matar
@@ -190,6 +205,7 @@ duro_de_matar:
   original_language: en
   vote_average: 7.7
   categories: [accion, suspenso]
+  user: carlos
 
 matar_o_morir:
   title: Matar o morir
@@ -200,6 +216,7 @@ matar_o_morir:
   original_language: en
   vote_average: 7.2
   categories: [accion, crimen, suspenso]
+  user: andres
 
 viaje_al_centro_de_la_tierra:
   title: Viaje al centro de la Tierra
@@ -210,6 +227,7 @@ viaje_al_centro_de_la_tierra:
   original_language: en
   vote_average: 5.8
   categories: [accion, aventura, ciencia_ficcion]
+  user: carlos
 
 viaje_a_las_estrellas:
   title: Viaje a las estrellas
@@ -220,6 +238,7 @@ viaje_a_las_estrellas:
   original_language: en
   vote_average: 7.4
   categories: [accion, aventura, ciencia_ficcion]
+  user: andres
 
 
   

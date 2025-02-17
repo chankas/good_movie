@@ -14,6 +14,7 @@ en:
           original_language: 'Original Language'
           categories: 'Categories'
           vote_average: 'Vote Average'
+          user: 'User'
         category:
           name: 'Name'
         user:

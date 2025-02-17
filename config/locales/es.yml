@@ -14,6 +14,7 @@ es:
         original_language: 'Idioma Original'
         categories: 'Categorias'
         vote_average: 'Calificacion'
+        user: 'Usuario'
       category:
         name: 'Nombre'
       user:
