@@ -41,6 +41,13 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '.movie', 5
   end
+
+  test 'render a list movies ordered by newest' do
+    get movies_path(order_by: 'newest')
+    assert_response :success
+    assert_select '.movie', 9
+    assert_select '.movie:first-child h2', movies(:matar_o_morir).title
+  end
   test 'render a new movie form' do
     get new_movie_path
 

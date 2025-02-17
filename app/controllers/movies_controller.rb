@@ -38,6 +38,6 @@ class MoviesController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id, :min_year, :max_year, :query_text, :order_by)
+    params.permit(:category_id, :min_year, :max_year, :query_text, :order_by, :page)
   end
 end
