@@ -1,0 +1,18 @@
+<div class="movie">
+  <h2><%= @movie.title %></h2>
+  <p><%= @movie.original_title %></p>
+  <p><%= @movie.overview %></p>
+  <p><%= image_tag @movie.poster_path.blank? ? 'Image-not-found.png': @movie.poster_path, style: 'height:400px; width:auto;' %></p>
+  <p><%= @movie.original_language %></p>
+  <p><%= @movie.release_date %></p>
+  <p><%= @movie.vote_average %></p>
+  <p><% @movie.categories.each do |category| %>
+      <%= category.name %> 
+    <% end %>
+  </p>
+  <%= link_to t('.edit'), edit_movie_path(@movie) if @movie.user_id == Current.user.id%>
+  <%= link_to t('.delete'), movie_path(@movie), data: {
+  turbo_method: :delete,
+  turbo_confirm: t('common.confirm')
+} if @movie.user_id == Current.user.id %>
+</div>
