@@ -1,4 +1,11 @@
-<%= link_to t('.movies'), movies_path %>
-<%= link_to t('.add'), new_movie_path %>
-<%= link_to t('.add_category'), new_category_path %>
-<%= link_to t('.login'), new_sessions_path %>
+<div>
+  <%= link_to t('.movies'), movies_path %>
+  <%= link_to t('.add'), new_movie_path %>
+  <%= link_to t('.add_category'), new_category_path %>
+  <%= link_to t('.login'), new_session_path unless Current.user %>
+  <%= link_to t('.register'), new_user_path unless Current.user %>
+  <%= link_to t('.logout'), session_path(Current.user.id), data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+  } if Current.user %>
+</div>
