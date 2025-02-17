@@ -2,6 +2,8 @@ en:
   activerecord:
       models:
         movie: 'Movie'
+        category: 'Category'
+        user: 'User'
       attributes:
         movie:
           title: 'Title'
@@ -12,7 +14,26 @@ en:
           original_language: 'Original Language'
           categories: 'Categories'
           vote_average: 'Vote Average'
+        category:
+          name: 'Name'
+        user:
+          name: 'Name'
+          username: 'Username'
+          email: 'Email'
+          password: 'Password'
+      errors:
+        models:
+          user:
+            attributes:
+              username:
+                format: 'The username can only contain letters, numbers, underscores and hyphens'
+              email:
+                format: 'The email is not valid'
   app_name: 'Good Movies'
+  authentications:
+    users:
+      create:
+        created: 'Your account has been created!'
   common:
     confirm: 'Are you sure?'
   create:

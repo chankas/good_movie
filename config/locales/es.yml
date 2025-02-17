@@ -1,21 +1,39 @@
 es:
   activerecord:
+    models:
+      movie: 'Pelicula'
+      category: 'Categoria'
+      user: 'Usuario'
+    attributes:
+      movie:
+        title: 'Titulo'
+        original_title: 'Titulo Original'
+        overview: 'Resumen'
+        release_date: 'Fecha de Estreno'
+        poster_path: 'Poster'
+        original_language: 'Idioma Original'
+        categories: 'Categorias'
+        vote_average: 'Calificacion'
+      category:
+        name: 'Nombre'
+      user:
+        name: 'Nombre'
+        username: 'Username'
+        email: 'Email'
+        password: 'Password'
+    errors:
       models:
-        movie: 'Pelicula'
-        category: 'Categoria'
-      attributes:
-        movie:
-          title: 'Titulo'
-          original_title: 'Titulo Original'
-          overview: 'Resumen'
-          release_date: 'Fecha de Estreno'
-          poster_path: 'Poster'
-          original_language: 'Idioma Original'
-          categories: 'Categorias'
-          vote_average: 'Calificacion'
-        category:
-          name: 'Nombre'
+        user:
+          attributes:
+            username:
+              format: 'El nombre de usuario solo puede contener letras, numeros, guiones bajos y guiones'
+            email:
+              format: 'El email no es valido'
   app_name: 'Buenas Peliculas'
+  authentications:
+    users:
+      create:
+        created: '¡Tu cuenta ha sido creada!'
   common:
     confirm: '¿Estás seguro?'
   categories:
