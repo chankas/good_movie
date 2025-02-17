@@ -34,6 +34,12 @@ es:
     users:
       create:
         created: '¡Tu cuenta ha sido creada!'
+    sessions:
+      create:
+        created: '¡Bienvenido de vuelta!'
+        invalid: 'Usuario o contraseña incorrectos'
+      destroy:
+        destroyed: '¡Hasta luego!'
   common:
     confirm: '¿Estás seguro?'
   categories:

@@ -34,6 +34,12 @@ en:
     users:
       create:
         created: 'Your account has been created!'
+    sessions:
+      create:
+        created: 'Welcome back!'
+        invalid: 'Incorrect username or password'
+      destroy:
+        destroyed: 'See you later!'
   common:
     confirm: 'Are you sure?'
   create:
