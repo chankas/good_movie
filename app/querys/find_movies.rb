@@ -35,9 +35,6 @@ class FindMovies
 
   def order_by(scoped, order_by)
     order_by_query = Movie::ORDER_BY.fetch(order_by&.to_sym, Movie::ORDER_BY[:newest])
-    
-    puts "---#{order_by&.to_sym}---"
-    puts "---#{order_by_query}---"
     scoped.order(order_by_query)
   end
 
