@@ -3,4 +3,6 @@ class ApplicationController < ActionController::Base
   include Authentication
   include Authorization
   include Localization
+  include Errors
+
 end

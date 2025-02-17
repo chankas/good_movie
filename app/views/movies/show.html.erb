@@ -15,4 +15,5 @@
   turbo_method: :delete,
   turbo_confirm: t('common.confirm')
 } if @movie.is_owner? %>
+  <%= link_to t(".show_more_movies_off", username: @movie.user.username), user_path(@movie.user.username) %>
 </div>

@@ -45,6 +45,7 @@ es:
     confirm: '¿Estás seguro?'
     not_logged_in: 'No has iniciado sesion'
     not_allowed: 'No tienes permisos para realizar esta accion'
+    record_not_found: 'Registro no encontrado'
   categories:
     create:
       created: 'Categoria creada exitosamente'
@@ -59,6 +60,8 @@ es:
     update:
       updated: 'Categoria actualizada exitosamente'
   movies:
+    show:
+      show_more_movies_off: 'Ver mas peliculas de %{username}'
     create:
       created: 'Pelicula creada exitosamente'
     index:
@@ -79,6 +82,9 @@ es:
       updated: 'Pelicula actualizada exitosamente'
     destroy:
       destroyed: 'Pelicula eliminada exitosamente'
+  users:
+    show:
+      movies_of_user: 'Peliculas de %{username}'
   shared:
     items:
       add: 'Agregar pelicula'

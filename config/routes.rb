@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories
+  resources :users, only: :show, path: '/user', param: :username
   resources :movies, path: '/'
 
 end

@@ -10,6 +10,7 @@ class FindMovies
     scoped = filter_by_min_year(scoped, params[:min_year])
     scoped = filter_by_max_year(scoped, params[:max_year])
     scoped = search_fulltext(scoped, params[:query_text])
+    scoped = filter_by_user(scoped, params[:user_id])
     order_by(scoped, params[:order_by])
   end
 
@@ -31,6 +32,11 @@ class FindMovies
   def search_fulltext(scoped, query_text) 
     return scoped unless query_text.present?
     scoped.search_fulltext(query_text)
+  end
+
+  def filter_by_user(scoped, user_id)
+    return scoped unless user_id.present?
+    scoped.where(user_id: user_id)
   end
 
   def order_by(scoped, order_by)

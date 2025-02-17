@@ -45,6 +45,7 @@ en:
     confirm: 'Are you sure?'
     not_logged_in: 'You are not logged in'
     not_allowed: 'You do not have permission to perform this action'
+    record_not_found: 'Not found'
   create:
     created: 'Movie created successfully'
   categories:
@@ -61,6 +62,8 @@ en:
     update:
       updated: 'Category updated successfully'
   movies:
+    show:
+      show_more_movies_off: 'Show more movies of %{username}'
     create:
       created: 'Movie created successfully'
     index:
@@ -81,6 +84,9 @@ en:
       updated: 'Movie updated successfully'
     destroy:
       destroyed: 'Movie deleted successfully'
+  users:
+    show:
+      movies_of_user: 'Movies of %{username}'
   shared:
     items:
       add: 'Add movie'
