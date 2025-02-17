@@ -2,8 +2,8 @@ require 'test_helper'
 
 class Authentications::SessionsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @sessions_by_username_params = { username: 'andres', password: 'testme' }
-    @sessions_by_email_params = { email: 'andres@mail.com', password: 'testme' }
+    @sessions_by_username_params = { login: 'andres', password: 'testme' }
+    @sessions_by_email_params = { login: 'andres@mail.com', password: 'testme' }
     @invalid_params = { username: 'invalid', password: 'invalid' }
   end
 

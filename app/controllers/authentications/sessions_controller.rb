@@ -1,4 +1,6 @@
 class Authentications::SessionsController < ApplicationController
+
+  skip_before_action :protect_pages, only: [:new, :create]
   def new
   end
 

@@ -1,5 +1,7 @@
 class MoviesController < ApplicationController
   
+  skip_before_action :protect_pages, only: [:index]
+
   def index
     @categories = Category.order(name: :asc).load_async
     @pagy, @movies = pagy_countless( FindMovies.new.call(product_params_index).load_async,  items: 9)

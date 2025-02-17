@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class MoviesControllerTest < ActionDispatch::IntegrationTest
+ 
+  setup do
+    login
+  end
   test 'render a list of movies' do
     get movies_path
     assert_response :success

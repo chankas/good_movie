@@ -42,6 +42,7 @@ en:
         destroyed: 'See you later!'
   common:
     confirm: 'Are you sure?'
+    not_logged_in: 'You are not logged in'
   create:
     created: 'Movie created successfully'
   categories:

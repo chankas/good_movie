@@ -42,6 +42,7 @@ es:
         destroyed: '¡Hasta luego!'
   common:
     confirm: '¿Estás seguro?'
+    not_logged_in: 'No has iniciado sesion'
   categories:
     create:
       created: 'Categoria creada exitosamente'
