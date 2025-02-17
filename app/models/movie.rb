@@ -6,6 +6,13 @@ class Movie < ApplicationRecord
       original_title: "B",
       overview: "C"
   }
+
+  ORDER_BY = {
+    "newest": 'movies.release_date DESC', 
+    "oldest": 'movies.release_date ASC', 
+    "best": 'movies.vote_average DESC', 
+    "worst": 'movies.vote_average ASC'
+  }
     
   has_many :category_movies
   has_many :categories, through: :category_movies
