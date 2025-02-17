@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :movies
+  namespace :authentications, path: '', as: '' do
+    resources :users, only: %i[new create], path: 'signup', path_names: { new: '/' }
+    resources :sessions, only: %i[new create destroy], path: 'login', path_names: { new: '/' }
+  end
+
+  resources :movies, path: '/'
   resources :categories
 
-  namespace :authentications, path: '', as: '' do
-    resources :users, only: %i[new create]
-    resources :sessions, only: %i[new create destroy]
-  end
 end

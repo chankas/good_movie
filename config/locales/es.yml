@@ -81,3 +81,4 @@ es:
       add: 'Agregar pelicula'
       add_category: 'Agregar categoria'
       movies: 'Peliculas'
+      logout: 'Cerrar sesion'

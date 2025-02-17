@@ -1,12 +1,12 @@
 <%= form_with(url: sessions_path) do |f| %>
   <div class="field">
     <%= f.label :login %>
-    <%= f.text_field :login %>
+    <%= f.text_field :login, required: true %>
   </div>
 
   <div class="field">
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, required: true %>
   </div>
 
   <%= f.submit %>
