@@ -23,4 +23,8 @@ class Movie < ApplicationRecord
   validates :overview, presence: true
   validates :release_date, presence: true
   
+  def is_owner?
+    Current.user&.id == user_id
+  end
+
 end

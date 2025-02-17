@@ -28,8 +28,8 @@ class ApplicationController < ActionController::Base
     redirect_to new_session_path, alert: t('common.not_logged_in') unless Current.user
   end
 
-  def authorize!(record)
-    is_allowed = record.user == Current.user
-    raice NotAutorized unless is_allowed
+  def authorize! record = nil
+    is_allowed = "#{controller_name.singularize}Policy".classify.constantize.new(record).send(action_name)
+    raise NotAutorized unless is_allowed
   end
 end

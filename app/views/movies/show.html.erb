@@ -10,9 +10,9 @@
       <%= category.name %> 
     <% end %>
   </p>
-  <%= link_to t('.edit'), edit_movie_path(@movie) if @movie.user_id == Current.user.id%>
+  <%= link_to t('.edit'), edit_movie_path(@movie) if @movie.is_owner? %>
   <%= link_to t('.delete'), movie_path(@movie), data: {
   turbo_method: :delete,
   turbo_confirm: t('common.confirm')
-} if @movie.user_id == Current.user.id %>
+} if @movie.is_owner? %>
 </div>
