@@ -87,21 +87,29 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'render a movie edit form' do
-    movie = movies(:rapido_y_furioso)
+    movie = movies(:the_matrix)
     get edit_movie_path(movie)
 
     assert_response :success
     assert_select 'form'
   end
   test 'allows to update a movie' do
-    movie = movies(:rapido_y_furioso)
+    movie = movies(:the_matrix)
     patch movie_path(movie), params: {
       movie: {
-        title: 'A todo gas'
+        title: 'La matriz XD'
       }
     }
     assert_redirected_to movies_url
     assert_equal flash[:notice], 'Pelicula actualizada exitosamente'
+  end
+
+  test 'can delete a movie' do
+    assert_difference('Movie.count', -1) do
+      delete movie_path(movies(:the_matrix))
+    end
+    assert_redirected_to movies_url
+    assert_equal flash[:notice], 'Pelicula eliminada exitosamente'
   end
 
 end

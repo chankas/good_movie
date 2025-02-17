@@ -44,6 +44,7 @@ es:
   common:
     confirm: '¿Estás seguro?'
     not_logged_in: 'No has iniciado sesion'
+    not_allowed: 'No tienes permisos para realizar esta accion'
   categories:
     create:
       created: 'Categoria creada exitosamente'
@@ -76,6 +77,8 @@ es:
       title: 'Nueva Pelicula'
     update:
       updated: 'Pelicula actualizada exitosamente'
+    destroy:
+      destroyed: 'Pelicula eliminada exitosamente'
   shared:
     items:
       add: 'Agregar pelicula'

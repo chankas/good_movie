@@ -44,6 +44,7 @@ en:
   common:
     confirm: 'Are you sure?'
     not_logged_in: 'You are not logged in'
+    not_allowed: 'You do not have permission to perform this action'
   create:
     created: 'Movie created successfully'
   categories:
@@ -78,6 +79,8 @@ en:
       title: 'New Movie'
     update:
       updated: 'Movie updated successfully'
+    destroy:
+      destroyed: 'Movie deleted successfully'
   shared:
     items:
       add: 'Add movie'

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :sessions, only: %i[new create destroy], path: 'login', path_names: { new: '/' }
   end
 
-  resources :movies, path: '/'
   resources :categories
+  resources :movies, path: '/'
 
 end
