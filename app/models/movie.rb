@@ -10,8 +10,8 @@ class Movie < ApplicationRecord
   ORDER_BY = {
     "newest": 'movies.release_date DESC', 
     "oldest": 'movies.release_date ASC', 
-    "best": 'movies.vote_average DESC', 
-    "worst": 'movies.vote_average ASC'
+    "best_vote_average": 'movies.vote_average DESC', 
+    "worst_vote_average": 'movies.vote_average ASC'
   }
     
   has_many :category_movies
