@@ -1,5 +1,5 @@
 <h1><%= t(".movies_of_user", username: @user.name) %></h1>
-<%= turbo_frame_tag "products-#{@pagy.page}" do %>
-    <%= render partial: 'movies/movie', collection: @movies %>
-    <%= turbo_frame_tag "products-#{@pagy.next}", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
-  <% end %>
+<%= turbo_frame_tag "movies-#{@pagy.page}" do %>
+  <%= render partial: 'movies/movie', collection: @movies %>
+  <%= turbo_frame_tag "movies-#{@pagy.next}", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+<% end %>

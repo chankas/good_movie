@@ -17,6 +17,7 @@ class Movie < ApplicationRecord
   has_many :category_movies
   has_many :categories, through: :category_movies
   belongs_to :user
+  has_many :favorites, dependent: :destroy
 
   validates :title, presence: true
   validates :original_title, presence: true
@@ -25,6 +26,10 @@ class Movie < ApplicationRecord
   
   def is_owner?
     Current.user&.id == user_id
+  end
+
+  def is_favorite?
+    Current.user.favorites&.pluck(:movie_id)&.include?(id)
   end
 
 end

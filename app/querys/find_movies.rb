@@ -1,11 +1,11 @@
 class FindMovies
-  attr_reader :products
-  def initialize(products = initial_scope)
-    @products = products
+  attr_reader :movies
+  def initialize(movies = initial_scope)
+    @movies = movies
   end
 
   def call(params={})
-    scoped = products
+    scoped = movies
     scoped = filter_by_category(scoped, params[:category_id])
     scoped = filter_by_min_year(scoped, params[:min_year])
     scoped = filter_by_max_year(scoped, params[:max_year])

@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
   def index
     @categories = Category.order(name: :asc).load_async
-    @pagy, @movies = pagy_countless( FindMovies.new.call(product_params_index).load_async,  items: 9)
+    @pagy, @movies = pagy_countless( FindMovies.new.call(movie_params_index).load_async,  items: 9)
   end
 
   def new
@@ -49,7 +49,7 @@ class MoviesController < ApplicationController
     params.require(:movie).permit(:title, :original_title, :overview, :release_date, :poster_path, :original_language, :vote_average, category_ids: [])
   end
 
-  def product_params_index
+  def movie_params_index
     params.permit(:category_id, :min_year, :max_year, :query_text, :order_by, :page)
   end
 
