@@ -1,0 +1,2 @@
+<h1><%= t('.my_favotites') %></h1>
+<%= turbo_frame_tag :movies, src: movies_path(favorite: true) %>

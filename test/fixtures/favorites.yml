@@ -4,3 +4,19 @@
 andres_el_aro:
   user: andres
   movie: el_aro
+
+andres_el_resplandor:
+  user: andres
+  movie: el_resplandor
+
+andres_el_senor_de_los_anillos:
+  user: andres
+  movie: el_senor_de_los_anillos
+
+andres_toy_story:
+  user: andres
+  movie: toy_story
+
+carlos_titanic:
+  user: carlos
+  movie: titanic

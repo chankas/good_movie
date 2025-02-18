@@ -50,7 +50,7 @@ class MoviesController < ApplicationController
   end
 
   def movie_params_index
-    params.permit(:category_id, :min_year, :max_year, :query_text, :order_by, :page)
+    params.permit(:category_id, :min_year, :max_year, :query_text, :order_by, :page, :favorite)
   end
 
   def movie

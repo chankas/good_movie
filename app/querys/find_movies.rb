@@ -11,6 +11,7 @@ class FindMovies
     scoped = filter_by_max_year(scoped, params[:max_year])
     scoped = search_fulltext(scoped, params[:query_text])
     scoped = filter_by_user(scoped, params[:user_id])
+    scoped = filter_by_favorite(scoped, params[:favorite])
     order_by(scoped, params[:order_by])
   end
 
@@ -38,7 +39,11 @@ class FindMovies
     return scoped unless user_id.present?
     scoped.where(user_id: user_id)
   end
-
+  
+  def filter_by_favorite(scoped, favorite)
+    return scoped unless favorite.present?
+    scoped.includes(:favorites).where(favorites: {user_id: Current.user.id})
+  end
   def order_by(scoped, order_by)
     order_by_query = Movie::ORDER_BY.fetch(order_by&.to_sym, Movie::ORDER_BY[:newest])
     scoped.order(order_by_query)

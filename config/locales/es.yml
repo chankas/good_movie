@@ -59,6 +59,9 @@ es:
       title: 'Editar Categoria'
     update:
       updated: 'Categoria actualizada exitosamente'
+  favorites:
+    index:
+      my_favotites: 'Mis favoritos'
   movies:
     show:
       show_more_movies_off: 'Ver mas peliculas de %{username}'

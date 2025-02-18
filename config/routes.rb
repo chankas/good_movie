@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :sessions, only: %i[new create destroy], path: 'login', path_names: { new: '/' }
   end
 
-  resources :favorites, only: %i[create destroy], param: :movie_id
+  resources :favorites, only: %i[index create destroy], param: :movie_id
   resources :categories
   resources :users, only: :show, path: '/user', param: :username
   resources :movies, path: '/'
