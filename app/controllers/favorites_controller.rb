@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
   def create
-    movie = Movie.find(params[:movie_id])
-    Favorite.create(movie: movie)
+    movie.favorite!
+
     respond_to do |format|
       format.turbo_stream do
         render turbo_stream: turbo_stream.replace("favorite", partial: "movies/favorite", locals: { movie: movie, time: Time.now })
@@ -10,8 +10,7 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    movie = Movie.find(params[:movie_id])
-    movie.favorites.find_by(user: Current.user).destroy!
+    movie.unfavorite!
     respond_to do |format|
       format.turbo_stream do
         render turbo_stream: turbo_stream.replace("favorite", partial: "movies/favorite", locals: { movie: movie, time: Time.now })
@@ -20,5 +19,8 @@ class FavoritesController < ApplicationController
   end
 
   private
+  def movie
+    @movie ||= Movie.find(params[:movie_id])
+  end
 
 end
