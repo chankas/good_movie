@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.0.2"
+ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.5", ">= 7.1.5.1"
@@ -53,6 +53,9 @@ gem "pg_search", "~> 2.3"
 # Pagination
 gem "pagy", "~> 6.5"
 
+# Tailwind CSS 
+gem "tailwindcss-rails", "~> 4.0"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
@@ -74,5 +77,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-
