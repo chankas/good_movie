@@ -5,13 +5,22 @@
         <%= link_to favorite_path(movie.id), data: {
           turbo_method: :delete
         } do %>
-          <%= image_tag 'favorite.svg', style: 'height:20px; width:20px;' %>
+          <%= image_tag 'favorite.svg',
+            onmouseover: "this.src='#{asset_path('remove-favorite.svg')}'",
+            onmouseout: "this.src='#{asset_path('favorite.svg')}'",
+            style: 'height:20px; width:20px;' %>
+             
+
         <% end %>
       <% else %>
         <%= link_to favorites_path(movie_id: movie.id), data: {
           turbo_method: :post
         } do %>
-          <%= image_tag 'no-favorite.svg', style: 'height:20px; width:20px;'%>
+          <%= image_tag 'no-favorite.svg',
+            onmouseover: "this.src='#{asset_path('add-favorite.svg')}'",
+            onmouseout: "this.src='#{asset_path('no-favorite.svg')}'",
+            style: 'height:20px; width:20px;'
+          %>
         <% end %> 
       <% end %>
     </div>
