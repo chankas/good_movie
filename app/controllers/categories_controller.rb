@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
 
+  before_action :autorize
   def index
     @categories = Category.order('LOWER(name)')
   end
@@ -18,12 +19,11 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
+    category
   end
 
   def update
-    @category = Category.find(params[:id])
-    if @category.update(category_params)
+    if category.update(category_params)
       redirect_to categories_path, notice: t('.updated')
     else
       render :edit, status: :unprocessable_entity
@@ -31,13 +31,20 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
-    @category.destroy
+    category.destroy
     redirect_to categories_path, notice: t('.destroyed')
   end
 
   private
   def category_params
     params.require(:category).permit(:name)
+  end
+
+  def autorize
+    authorize!
+  end
+
+  def category
+    @category ||= Category.find(params[:id])
   end
 end

@@ -12,8 +12,9 @@ module ActiveSupport
 
     # Add more helper methods to be used by all tests here...
     # 
-    def login
-      post sessions_path, params: {login: 'andres', password: 'testme' }
+    def login(user = nil)
+      user = user || users(:andres)
+      post sessions_path, params: {login: user.username, password: 'testme' }
     end
   end
 end
