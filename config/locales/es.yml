@@ -53,6 +53,8 @@ es:
       destroyed: 'Categoria destruida exitosamente' 
     index:
       title: 'Categorias'
+      edit: 'Editar'
+      delete: 'Eliminar'
     new:
       title: 'Nueva Categoria'
     edit:

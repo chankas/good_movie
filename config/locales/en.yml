@@ -55,6 +55,8 @@ en:
       destroyed: 'Category destroyed successfully'
     index:
       title: 'Categories'
+      edit: 'Edit'
+      delete: 'Delete'
     new:
       title: 'New Category'
     edit:
