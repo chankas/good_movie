@@ -1,12 +1,13 @@
 <%= turbo_frame_tag "home" do %>
-  <%= link_to t('.all'), movies_path %>
-  <%= render partial: 'category', collection: @categories %>
+  <div class="flex overflow-x-scroll gap-2 my-4">
+    <%= link_to t('.all'), movies_path, class: 'category bg-white text-gray-600 px-4 py-2 rounded-2xl drop-shadow-sm hover:bg-gray-300' %>
+    <%= render partial: 'category', collection: @categories %>
+  </div>
   <%= render partial: 'filters' %>
-  <%= turbo_frame_tag 'movies' do %>
-    <%= turbo_frame_tag "movies-#{@pagy.page}" do %>
+  <%= turbo_frame_tag 'movies', class: "flex flex-col m-2" do %>
+    <%= turbo_frame_tag "movies-#{@pagy.page}", class: 'movie flex flex-col w-full' do %>
       <%= render partial: 'movie', collection: @movies %>
-      <%=  t('.page', page: @pagy.next) %>
-      <%= turbo_frame_tag "movies-#{@pagy.next}", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+      <%= turbo_frame_tag "movies-#{@pagy.next}", class: 'movie flex flex-col w-full', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
     <% end %>
   <% end %>
 <% end %>

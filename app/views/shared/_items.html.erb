@@ -1,12 +1,12 @@
 <div>
-  <%= link_to t('.movies'), movies_path %>
-  <%= link_to t('.add'), new_movie_path if Current.user %>
-  <%= link_to t('.add_category'), new_category_path if Current.user&.admin?%>
-  <%= link_to t('.my_favorites'), favorites_path if Current.user %>
-  <%= link_to t('.login'), new_session_path unless Current.user %>
-  <%= link_to t('.register'), new_user_path unless Current.user %>
+  <%= link_to t('.movies'), movies_path, class: "mx-2 text-teal-500 font-bold" %>
+  <%= link_to t('.add'), new_movie_path, class: "mx-2 text-teal-500 font-bold" if Current.user %>
+  <%= link_to t('.add_category'), new_category_path, class: "mx-2 text-teal-500 font-bold" if Current.user&.admin?%>
+  <%= link_to t('.my_favorites'), favorites_path, class: "mx-2 text-teal-500 font-bold" if Current.user %>
+  <%= link_to t('.login'), new_session_path, class: "mx-2 text-teal-500 font-bold" unless Current.user %>
+  <%= link_to t('.register'), new_user_path, class: "mx-2 text-teal-500 font-bold" unless Current.user %>
   <%= link_to t('.logout'), session_path(Current.user.id), data: {
     turbo_method: :delete,
     turbo_confirm: t('common.confirm')
-  } if Current.user %>
+  }, class: "mx-2 text-teal-500 font-bold" if Current.user %>
 </div>

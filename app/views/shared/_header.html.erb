@@ -1,2 +1,12 @@
-<h1><%= t('app_name') %></h1>
-<%= render partial: 'shared/items' %>
+<div class="bg-white flex justify-between items-center px-2">
+  <h1 class="">
+    <span class="hidden">
+    <%= t('app_name') %>
+    </span>
+    <span class="text-3xl">
+      <%= t('app_name_short')%>
+    </span>
+  </h1>
+
+  <%= render partial: 'shared/items' %>
+</div>

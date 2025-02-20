@@ -1,13 +1,13 @@
-<div class="movie">
-  <h2><%= link_to movie.title, movie_path(movie), 'data-turbo-frame': '_top' %></h2>
-  <p><%= movie.original_title %></p>
-  <p><%= movie.overview %></p>
-  <p><%= image_tag movie.poster_path.blank? ? 'Image-not-found.png': movie.poster_path, style: 'height:400px; width:auto;' %></p>
-  <p><%= movie.original_language %></p>
-  <p><%= movie.release_date %></p>
+<%= link_to movie_path(movie), class: 'product', 'data-turbo-frame': '_top' do %>
+
+  <h2 class="font-bold text-xl"><%= movie.title %></h2>
+  <span><%= movie.original_title %></span>
+  <p><%= image_tag movie.poster_path.blank? ? 'Image-not-found.png': movie.poster_path, class: "w-auto h-400  object-cover" %></p>
+
+  <p class="text-gray-500 text-sm mt-2"><%= movie.overview %></p>
   <p><%= movie.vote_average %></p>
   <p><% movie.categories.each do |category| %>
       <%= category.name %> 
     <% end %>
   </p>
-</div>
+<% end %>

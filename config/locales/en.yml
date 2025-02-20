@@ -31,6 +31,7 @@ en:
               email:
                 format: 'The email is not valid'
   app_name: 'Good Movies'
+  app_name_short: 'GM'
   authentications:
     users:
       create:
