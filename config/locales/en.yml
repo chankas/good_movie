@@ -1,35 +1,35 @@
 en:
   activerecord:
-      models:
-        movie: 'Movie'
-        category: 'Category'
+    models:
+      movie: 'Movie'
+      category: 'Category'
+      user: 'User'
+    attributes:
+      movie:
+        title: 'Title'
+        original_title: 'Original Title'
+        overview: 'Overview'
+        release_date: 'Release Date'
+        poster_path: 'Poster Path'
+        original_language: 'Original Language'
+        categories: 'Categories'
+        vote_average: 'Vote Average'
         user: 'User'
-      attributes:
-        movie:
-          title: 'Title'
-          original_title: 'Original Title'
-          overview: 'Overview'
-          release_date: 'Release Date'
-          poster_path: 'Poster Path'
-          original_language: 'Original Language'
-          categories: 'Categories'
-          vote_average: 'Vote Average'
-          user: 'User'
-        category:
-          name: 'Name'
+      category:
+        name: 'Name'
+      user:
+        name: 'Name'
+        username: 'Username'
+        email: 'Email'
+        password: 'Password'
+    errors:
+      models:
         user:
-          name: 'Name'
-          username: 'Username'
-          email: 'Email'
-          password: 'Password'
-      errors:
-        models:
-          user:
-            attributes:
-              username:
-                format: 'The username can only contain letters, numbers, underscores and hyphens'
-              email:
-                format: 'The email is not valid'
+          attributes:
+            username:
+              format: 'The username can only contain letters, numbers, underscores and hyphens'
+            email:
+              format: 'The email is not valid'
   app_name: 'Good Movies'
   app_name_short: 'GM'
   authentications:
@@ -47,8 +47,6 @@ en:
     not_logged_in: 'You are not logged in'
     not_allowed: 'You do not have permission to perform this action'
     record_not_found: 'Not found'
-  create:
-    created: 'Movie created successfully'
   categories:
     create:
       created: 'Category created successfully'
@@ -93,6 +91,8 @@ en:
   users:
     show:
       movies_of_user: 'Movies of %{username}'
+  category_component:
+    all: 'All'
   shared:
     items:
       add: 'Add movie'

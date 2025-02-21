@@ -91,6 +91,8 @@ es:
   users:
     show:
       movies_of_user: 'Peliculas de %{username}'
+  category_component:
+    all: 'Todas'
   shared:
     items:
       add: 'Agregar pelicula'
