@@ -1,16 +1,18 @@
 # frozen_string_literal: true
 
 class CategoryComponent < ViewComponent::Base
+  attr_reader :category
+
   def initialize(category: nil)
     @category = category
   end
 
   def title
-  @category ? @category.name : t('.all')
+    category ? category.name : t('.all')
   end
 
   def link
-   @category ? movies_path(category_id: @category) : movies_path
+   category ? movies_path(category_id: category) : movies_path
   end
 
   def classes
@@ -18,8 +20,8 @@ class CategoryComponent < ViewComponent::Base
   end
 
   def active?
-    return true if @category.nil? && params[:category_id].nil?
-    @category&.id == params[:category_id].to_i
+    return true if category.nil? && params[:category_id].nil?
+    category&.id == params[:category_id].to_i
   end
 
   def background
