@@ -36,7 +36,12 @@ es:
     users:
       create:
         created: '¡Tu cuenta ha sido creada!'
+      new:
+        sign_up: 'Registrarse'
     sessions:
+      new:
+        sign_in_to: 'Inicia sesion en tu cuenta'
+        sign_up: 'Ingresar'
       create:
         created: '¡Bienvenido de vuelta!'
         invalid: 'Usuario o contraseña incorrectos'
