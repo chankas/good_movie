@@ -104,3 +104,10 @@ es:
       add_category: 'Agregar categoria'
       movies: 'Peliculas'
       logout: 'Cerrar sesion'
+  user_mailer:
+    welcome:
+      politics: 'politica_de_privacidad'
+      subject: 'Bienvenido a Buenas Peliculas!'
+      title: '¡Bienvenido a Buenas Peliculas!'
+      welcome: '¡Bienvenido %{name}!'
+      content: 'Gracias por registrarte en Buenas Peliculas. Esperamos que disfrutes de la aplicacion.'

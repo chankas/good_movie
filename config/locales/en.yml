@@ -103,4 +103,12 @@ en:
       add_category: 'Add category'
       movies: 'Movies'
       logout: 'Logout'
+  user_mailer:
+    welcome:
+      politics: 'privacy_policy'
+      subject: 'Welcome to Good Movies!'
+      title: 'Welcome to Good Movies!'
+      welcome: 'Welcome %{name}!'
+      content: 'Thank you for registering at Good Movies. We hope you enjoy the application.'
+
   

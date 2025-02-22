@@ -3,6 +3,9 @@ class MoviesController < ApplicationController
   skip_before_action :protect_pages, only: [:index, :show]
 
   def index
+    if Current.user
+      UserMailer.with(user: Current.user).welcome.deliver_later
+    end
     @categories = Category.order(name: :asc).load_async
     @pagy, @movies = pagy_countless( FindMovies.new.call(movie_params_index).load_async,  items: 9)
   end
