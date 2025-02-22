@@ -8,7 +8,6 @@ class UserMailer < ApplicationMailer
   def welcome
     user = params[:user]
     @name = user.name
-    @username = user.username
     attachments["#{t('.politics')}.pdf"] = File.read("documents/politicas_#{I18n.locale}.pdf")
     mail( to: user.email, subject: t('.subject'))
   end

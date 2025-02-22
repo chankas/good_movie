@@ -9,7 +9,6 @@ class Authentications::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      UserMailer.welcome.deliver_later
       redirect_to movies_path , notice: t('.created')
     else
       render :new, status: :unprocessable_entity
