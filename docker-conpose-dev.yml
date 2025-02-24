@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:14.9
+    ports:
+      - "5432:5432"
+    environment:      
+      - POSTGRES_DB=${POSTGRES_DB}_${RAILS_ENV}
+      - POSTGRES_USER=${POSTGRES_USER}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    environment:
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_DB=${POSTGRES_DB}_${RAILS_ENV}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    links:
+      - db
+    volumes:
+      - .:/rails
+volumes:
+  postgres-data:

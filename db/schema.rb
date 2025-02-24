@@ -21,8 +21,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_02_18_152825) do
   end
 
   create_table "category_movies", force: :cascade do |t|
-    t.integer "category_id"
-    t.integer "movie_id"
+    t.bigint "category_id"
+    t.bigint "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_category_movies_on_category_id"
